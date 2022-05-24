@@ -1,7 +1,7 @@
-get_wallpaper_window(): 00000000000105AE
+get_wallpaper_window(): 00000000000105A4
 GetDesktopWindow(): 0000000000010010
-get_wallpaper_window(): 00000000000105AE
+get_wallpaper_window(): 00000000000105A4
 GetDesktopWindow(): 0000000000010010
-GetShellWindow(): 00000000000101AE
-screenDC(): FFFFFFFFB8012ACE
+GetShellWindow(): 00000000000101B4
+screenDC(): 000000002E010C28
 Path(55): C:\Users\MARKO\Pictures\Best-Dual-Monitor-Wallpaper.jpg

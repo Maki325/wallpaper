@@ -1,31 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32516.85
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wallpaper", "Wallpaper\Wallpaper.vcxproj", "{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}"
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wallpaper", "Wallpaper\Wallpaper.vcxproj", "{AD33F98A-199E-AD01-62DC-5EA7CE858B56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{53E47842-3FC8-3998-A828-34EB942B241A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Glad", "Wallpaper\vendor\Glad\Glad.vcxproj", "{BDD6857C-A90D-870D-52FA-6C103E10030F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
+		Dist|x64 = Dist|x64
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Debug|x64.ActiveCfg = Debug|x64
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Debug|x64.Build.0 = Debug|x64
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Debug|x86.ActiveCfg = Debug|Win32
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Debug|x86.Build.0 = Debug|Win32
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Release|x64.ActiveCfg = Release|x64
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Release|x64.Build.0 = Release|x64
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Release|x86.ActiveCfg = Release|Win32
-		{E1A83DA7-E86C-4CF6-972B-9C2E267904A1}.Release|x86.Build.0 = Release|Win32
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Debug|x64.ActiveCfg = Debug|x64
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Debug|x64.Build.0 = Debug|x64
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Dist|x64.ActiveCfg = Dist|x64
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Dist|x64.Build.0 = Dist|x64
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Release|x64.ActiveCfg = Release|x64
+		{AD33F98A-199E-AD01-62DC-5EA7CE858B56}.Release|x64.Build.0 = Release|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Debug|x64.ActiveCfg = Debug|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Debug|x64.Build.0 = Debug|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Dist|x64.ActiveCfg = Dist|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Dist|x64.Build.0 = Dist|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Release|x64.ActiveCfg = Release|x64
+		{BDD6857C-A90D-870D-52FA-6C103E10030F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5280A034-AFF8-4CDD-879F-687197E8005B}
+	GlobalSection(NestedProjects) = preSolution
+		{BDD6857C-A90D-870D-52FA-6C103E10030F} = {53E47842-3FC8-3998-A828-34EB942B241A}
 	EndGlobalSection
 EndGlobal
