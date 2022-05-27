@@ -74,5 +74,18 @@ namespace Wallpaper {
       GetWindowRect(hWnd, &hwndSize);
       PrintRect(hwndSize);
     }
+  
+    RECT& NormalizeRect(RECT& rect) {
+      if (rect.left < 0) {
+        rect.right -= rect.left;
+        rect.left = 0;
+      }
+      if (rect.top < 0) {
+        rect.bottom -= rect.top;
+        rect.top = 0;
+      }
+
+      return rect;
+    }
   }
 }

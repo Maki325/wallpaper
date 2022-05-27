@@ -6,5 +6,6 @@ namespace Wallpaper {
     HWND GetWallpaperWindow();
     void PrintRect(RECT r);
     void PrintWindowSize(HWND hWnd);
+    RECT& NormalizeRect(RECT& rect);
   };
 }

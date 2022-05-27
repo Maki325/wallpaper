@@ -1,10 +1,36 @@
-#include "ConsoleHelper.h"
 #include "pch.h"
+#include "ConsoleTask.h"
+#include "../Core/Application.h"
 
-namespace ConsoleHelper
-{
+namespace Wallpaper {
+  ConsoleTask::ConsoleTask() {
+    InitConsole();
+  }
+
+  void ConsoleTask::Run() {
+    std::string input;
+    do {
+      std::cin >> input;
+      if (input == "stop" || input == "exit" || input == "quit" || input == "q") {
+        Application::PostEvent({ Event::Type::EVENT_TYPE_QUIT });
+        break;
+      }
+      else if (input == "reset" || input == "r") {
+        Application::PostEvent({ Event::Type::EVENT_TYPE_RESET });
+      }
+      else if (input == "rq") {
+        Application::PostEvent({ Event::Type::EVENT_TYPE_RESET });
+        Application::PostEvent({ Event::Type::EVENT_TYPE_QUIT });
+        break;
+      }
+      else {
+        std::cout << "Unknown: " << input << std::endl;
+      }
+    } while (true);
+  }
+
   // https://stackoverflow.com/a/46050762
-  void InitConsole() {
+  void ConsoleTask::InitConsole() {
     static const WORD MAX_CONSOLE_LINES = 500;
     int hConHandle;
     long lStdHandle;
@@ -50,4 +76,4 @@ namespace ConsoleHelper
     std::wcin.clear();
     std::cin.clear();
   }
-};
+}

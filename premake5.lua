@@ -10,6 +10,7 @@ workspace "Wallpaper"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+OPENCV_DIR = os.getenv("OPENCV_DIR")
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
@@ -46,13 +47,15 @@ project "Wallpaper"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{OPENCV_DIR}/include/"
 	}
 
 	links 
 	{
 		"Glad",
-		"opengl32.lib"
+		"opengl32.lib",
+		"%{OPENCV_DIR}/x64/vc15/lib/*"
 	}
 	
 	filter "system:windows"

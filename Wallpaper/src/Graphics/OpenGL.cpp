@@ -2,7 +2,14 @@
 #include "OpenGL.h"
 
 namespace Wallpaper {
+  OpenGL::OpenGL() {}
+
   OpenGL::OpenGL(HWND hWnd) {
+    Init(hWnd);
+  }
+
+  void OpenGL::Init(HWND hWnd) {
+    m_hWnd = hWnd;
     // https://www.khronos.org/opengl/wiki/Creating_an_OpenGL_Context_%28WGL%29
     PIXELFORMATDESCRIPTOR pfd =
     {
@@ -40,7 +47,20 @@ namespace Wallpaper {
     wglDeleteContext(m_openGLRenderingContext);
   }
 
+  HWND OpenGL::GetHWnd() {
+    return m_hWnd;
+  }
+
   void OpenGL::SwapBuffers() {
     ::SwapBuffers(m_windowDeviceContext);
   }
+
+  void OpenGL::SetViewport(RECT& rect) {
+    glViewport(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top);
+  }
+
+  void OpenGL::SetViewport(int x, int y, int width, int height) {
+    glViewport(x, y, width, height);
+  }
+
 }
